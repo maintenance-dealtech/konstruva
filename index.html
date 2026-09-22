@@ -1,0 +1,973 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>Konstruva | Jasa Desain, Bangun &amp; Renovasi</title>
+<meta name="description" content="Konstruva menyediakan layanan perencanaan, desain, perhitungan biaya, pembangunan, dan renovasi untuk mewujudkan bangunan yang terencana dan berkualitas.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Konstruva | Jasa Desain, Bangun &amp; Renovasi">
+<meta property="og:description" content="Layanan perencanaan, desain, perhitungan biaya, pembangunan, dan renovasi. Dari Rencana, Menjadi Nyata.">
+<meta property="og:image" content="assets/hero.png">
+<meta property="og:site_name" content="Konstruva">
+<meta name="ext-resource-dependency" content="assets/desain-facade.png">
+<meta name="ext-resource-dependency" content="assets/gambar-denah-1.png">
+<meta name="ext-resource-dependency" content="assets/gambar-denah-2.png">
+<meta name="ext-resource-dependency" content="assets/gambar-kerja-1.png">
+<meta name="ext-resource-dependency" content="assets/gambar-kerja-2.png">
+<meta name="ext-resource-dependency" content="assets/eksterior-1.png">
+<meta name="ext-resource-dependency" content="assets/eksterior-2.png">
+<meta name="ext-resource-dependency" content="assets/hero.png">
+<meta name="ext-resource-dependency" content="assets/interior-kamar.png">
+<meta name="ext-resource-dependency" content="assets/interior-dapur.png">
+<meta name="ext-resource-dependency" content="assets/interior-foyer.png">
+<meta name="ext-resource-dependency" content="assets/interior-kamar-mandi.png">
+<meta name="ext-resource-dependency" content="assets/rab-1.png">
+<meta name="ext-resource-dependency" content="assets/rab-2.png">
+<meta name="ext-resource-dependency" content="assets/renovasi-1.png">
+<meta name="ext-resource-dependency" content="assets/renovasi-2.png">
+<meta name="ext-resource-dependency" content="assets/renovasi-3.png">
+<meta name="ext-resource-dependency" content="assets/renovasi-4.png">
+<meta name="ext-resource-dependency" content="assets/renovasi-5.png">
+<meta name="ext-resource-dependency" content="assets/renovasi-6.png">
+<meta name="ext-resource-dependency" content="assets/logo-mark.png">
+<meta name="ext-resource-dependency" content="assets/logo-mark-white.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 96px; -webkit-text-size-adjust: 100%; }
+body { margin: 0; background: #FFFFFF; color: #0D2745; font-family: "Manrope", system-ui, sans-serif; line-height: 1.6; overflow-x: hidden; -webkit-font-smoothing: antialiased; text-wrap: pretty; }
+img { display: block; max-width: 100%; }
+button, input, select, textarea { font: inherit; color: inherit; }
+a { color: #087EA4; text-decoration: none; }
+a:hover { color: #17385F; }
+:focus-visible { outline: 2px solid #087EA4; outline-offset: 3px; border-radius: 4px; }
+@keyframes konRing { 0% { transform: scale(1); opacity: .45; } 70% { transform: scale(1.7); opacity: 0; } 100% { transform: scale(1.7); opacity: 0; } }
+@keyframes konDrop { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes konFade { from { opacity: 0; } to { opacity: 1; } }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation-duration: .001ms !important; animation-iteration-count: 1 !important; transition-duration: .001ms !important; }
+}
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"ProfessionalService","name":"Konstruva","description":"Layanan perencanaan, desain, perhitungan biaya, pembangunan, dan renovasi bangunan.","slogan":"Dari Rencana, Menjadi Nyata","telephone":"+62895322422375","email":"konstruva.id@gmail.com","url":"https://konstruva.id","areaServed":"Indonesia","serviceType":["Perencanaan dan Desain","Perhitungan Biaya","Design and Build","Konstruksi dan Pembangunan","Renovasi"]}
+</script>
+</helmet>
+
+<template id="__bundler_thumbnail">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><rect width="512" height="512" fill="#17385F"></rect><g fill="none" stroke="#FFFFFF" stroke-width="26" stroke-linecap="round" stroke-linejoin="round"><path d="M186 154v204"></path><path d="M330 154 208 256l122 102"></path></g></svg>
+</template>
+
+<header ref="{{ headerRef }}" style="position: fixed; top: 0; left: 0; right: 0; z-index: 60; background: transparent; backdrop-filter: none; -webkit-backdrop-filter: none; border-bottom: 1px solid transparent; transition: box-shadow 300ms ease, background 300ms ease, border-color 300ms ease, backdrop-filter 300ms ease;">
+  <div style="max-width: 1320px; margin: 0 auto; padding: 12px clamp(16px, 4vw, 48px); display: flex; align-items: center; justify-content: space-between; gap: 16px;">
+    <a href="#beranda" aria-label="Konstruva — Beranda" style="display: flex; align-items: center; gap: 12px; min-height: 44px; min-width: 0; flex: 0 1 auto;">
+      <span style="position: relative; flex: none; width: clamp(30px, 4vw, 38px); display: inline-flex;">
+        <img data-logo="white" src="assets/logo-mark-white.png" alt="Logo Konstruva" width="149" height="147" style="width: 100%; height: auto; transition: opacity 300ms ease;">
+        <img data-logo="navy" src="assets/logo-mark.png" alt="" aria-hidden="true" width="149" height="147" style="position: absolute; left: 0; top: 0; width: 100%; height: auto; opacity: 0; transition: opacity 300ms ease;">
+      </span>
+      <span style="display: block; line-height: 1.15;">
+        <span data-brand="1" style="display: block; white-space: nowrap; font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 800; font-size: clamp(16px, 2.1vw, 18px); letter-spacing: 0.05em; color: #FFFFFF;">KONSTRUVA</span>
+        <span data-tagline="1" style="display: block; white-space: nowrap; font-size: clamp(10px, 1.7vw, 11px); letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.82); margin-top: 2px;">Desain, Bangun &amp; Renovasi</span>
+      </span>
+    </a>
+
+    <sc-if value="{{ isDesktop }}" hint-placeholder-val="{{ true }}">
+      <nav aria-label="Navigasi utama" style="display: flex; align-items: center; gap: clamp(10px, 1.6vw, 26px);">
+        <a href="#beranda" data-navlink="active" style="font-size: 14px; font-weight: 700; color: #FFFFFF; padding: 10px 2px; min-height: 44px; display: inline-flex; align-items: center; transition: color 220ms ease, opacity 220ms ease;" style-hover="opacity: 0.7;">Beranda</a>
+        <a href="#tentang" data-navlink="1" style="font-size: 14px; font-weight: 500; color: rgba(255,255,255,0.88); padding: 10px 2px; min-height: 44px; display: inline-flex; align-items: center; transition: color 220ms ease, opacity 220ms ease;" style-hover="opacity: 0.7;">Tentang Kami</a>
+        <a href="#layanan" data-navlink="1" style="font-size: 14px; font-weight: 500; color: rgba(255,255,255,0.88); padding: 10px 2px; min-height: 44px; display: inline-flex; align-items: center; transition: color 220ms ease, opacity 220ms ease;" style-hover="opacity: 0.7;">Layanan</a>
+        <a href="#proyek" data-navlink="1" style="font-size: 14px; font-weight: 500; color: rgba(255,255,255,0.88); padding: 10px 2px; min-height: 44px; display: inline-flex; align-items: center; transition: color 220ms ease, opacity 220ms ease;" style-hover="opacity: 0.7;">Proyek</a>
+        <a href="#proses" data-navlink="1" style="font-size: 14px; font-weight: 500; color: rgba(255,255,255,0.88); padding: 10px 2px; min-height: 44px; display: inline-flex; align-items: center; transition: color 220ms ease, opacity 220ms ease;" style-hover="opacity: 0.7;">Proses Kerja</a>
+        <a href="#kontak" data-navlink="1" style="font-size: 14px; font-weight: 500; color: rgba(255,255,255,0.88); padding: 10px 2px; min-height: 44px; display: inline-flex; align-items: center; transition: color 220ms ease, opacity 220ms ease;" style-hover="opacity: 0.7;">Kontak</a>
+        <a data-cta="1" href="{{ waHref }}" target="_blank" rel="noopener" style="margin-left: 6px; display: inline-flex; align-items: center; gap: 10px; min-height: 44px; padding: 12px 20px; border-radius: 10px; background: #FFFFFF; color: #17385F; font-size: 14px; font-weight: 700; box-shadow: 0 10px 24px -16px rgba(0,0,0,0.6); transition: background 240ms ease, color 240ms ease, transform 240ms ease;" style-hover="transform: translateY(-1px);">
+          Konsultasi Gratis
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"></path><path d="m13 6 6 6-6 6"></path></svg>
+        </a>
+      </nav>
+    </sc-if>
+
+    <sc-if value="{{ isMobile }}" hint-placeholder-val="{{ false }}">
+      <div style="display: flex; align-items: center; gap: 8px; flex: none;">
+        <a data-cta="1" href="{{ waHref }}" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; justify-content: center; min-height: 44px; padding: 10px 14px; border-radius: 10px; background: #FFFFFF; color: #17385F; font-size: 13px; font-weight: 700; transition: background 240ms ease, color 240ms ease;">Konsultasi</a>
+        <button data-menubtn="1" type="button" onClick="{{ toggleMenu }}" aria-label="Buka menu navigasi" aria-expanded="{{ menuOpen }}" aria-controls="menu-mobile" style="width: 44px; height: 44px; display: inline-flex; align-items: center; justify-content: center; border: 1px solid rgba(255,255,255,0.45); border-radius: 10px; background: rgba(255,255,255,0.14); color: #FFFFFF; cursor: pointer; transition: background 240ms ease, color 240ms ease, border-color 240ms ease;">
+          <sc-if value="{{ menuOpen }}" hint-placeholder-val="{{ false }}">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12"></path><path d="M18 6 6 18"></path></svg>
+          </sc-if>
+          <sc-if value="{{ menuClosed }}" hint-placeholder-val="{{ true }}">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16"></path><path d="M4 12h16"></path><path d="M4 17h16"></path></svg>
+          </sc-if>
+        </button>
+      </div>
+    </sc-if>
+  </div>
+
+  <sc-if value="{{ showMobileMenu }}" hint-placeholder-val="{{ false }}">
+    <nav id="menu-mobile" aria-label="Navigasi mobile" style="border-top: 1px solid rgba(13,39,69,0.07); background: #FFFFFF; padding: 8px clamp(16px, 4vw, 48px) 20px; display: flex; flex-direction: column; animation: konDrop 240ms ease both; max-height: 70vh; overflow-y: auto;">
+      <a href="#beranda" onClick="{{ closeMenu }}" style="padding: 14px 4px; min-height: 44px; display: flex; align-items: center; justify-content: space-between; font-size: 15px; font-weight: 600; color: #17385F; border-bottom: 1px solid rgba(13,39,69,0.06);">Beranda<span style="color: #B7C2CF;">→</span></a>
+      <a href="#tentang" onClick="{{ closeMenu }}" style="padding: 14px 4px; min-height: 44px; display: flex; align-items: center; justify-content: space-between; font-size: 15px; font-weight: 500; color: #33465C; border-bottom: 1px solid rgba(13,39,69,0.06);">Tentang Kami<span style="color: #B7C2CF;">→</span></a>
+      <a href="#layanan" onClick="{{ closeMenu }}" style="padding: 14px 4px; min-height: 44px; display: flex; align-items: center; justify-content: space-between; font-size: 15px; font-weight: 500; color: #33465C; border-bottom: 1px solid rgba(13,39,69,0.06);">Layanan<span style="color: #B7C2CF;">→</span></a>
+      <a href="#proyek" onClick="{{ closeMenu }}" style="padding: 14px 4px; min-height: 44px; display: flex; align-items: center; justify-content: space-between; font-size: 15px; font-weight: 500; color: #33465C; border-bottom: 1px solid rgba(13,39,69,0.06);">Proyek<span style="color: #B7C2CF;">→</span></a>
+      <a href="#proses" onClick="{{ closeMenu }}" style="padding: 14px 4px; min-height: 44px; display: flex; align-items: center; justify-content: space-between; font-size: 15px; font-weight: 500; color: #33465C; border-bottom: 1px solid rgba(13,39,69,0.06);">Proses Kerja<span style="color: #B7C2CF;">→</span></a>
+      <a href="#kontak" onClick="{{ closeMenu }}" style="padding: 14px 4px; min-height: 44px; display: flex; align-items: center; justify-content: space-between; font-size: 15px; font-weight: 500; color: #33465C;">Kontak<span style="color: #B7C2CF;">→</span></a>
+      <a href="{{ waHref }}" target="_blank" rel="noopener" onClick="{{ closeMenu }}" style="margin-top: 14px; display: flex; align-items: center; justify-content: center; gap: 10px; min-height: 48px; padding: 13px 18px; border-radius: 10px; background: #17385F; color: #FFFFFF; font-size: 15px; font-weight: 600;" style-hover="background: #0D2745; color: #FFFFFF;">Konsultasi Gratis</a>
+    </nav>
+  </sc-if>
+</header>
+
+<main>
+  <section id="beranda" style="position: relative; isolation: isolate; min-height: clamp(540px, 86vh, 780px); display: flex; align-items: flex-end; overflow: hidden; background: #0D2745;">
+    <img data-asset="assets/hero.png" src="assets/hero.png" alt="Rumah tinggal dua lantai hasil pengerjaan Konstruva dengan pencahayaan interior hangat pada sore hari" width="912" height="513" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 62% 50%; z-index: -2;">
+    <div data-hero-overlay="1" style="position: absolute; inset: 0; z-index: -1; background: linear-gradient(100deg, rgba(13,39,69,0.95) 0%, rgba(13,39,69,0.88) 28%, rgba(13,39,69,0.62) 58%, rgba(13,39,69,0.28) 100%);"></div>
+    <div style="position: absolute; inset: 0; z-index: -1; background: linear-gradient(180deg, rgba(13,39,69,0.5) 0%, rgba(13,39,69,0) 30%, rgba(13,39,69,0.45) 100%);"></div>
+
+    <div style="position: relative; width: 100%; max-width: 1320px; margin: 0 auto; padding: clamp(118px, 15vw, 172px) clamp(20px, 4vw, 48px) clamp(48px, 7vw, 92px);">
+      <div style="max-width: 680px;">
+        <div style="display: flex; align-items: center; gap: 16px; margin-bottom: clamp(18px, 3vw, 28px);">
+          <span style="width: clamp(28px, 6vw, 54px); height: 1px; background: rgba(255,255,255,0.45); flex: none;"></span>
+          <span style="font-size: clamp(11px, 1.8vw, 12px); font-weight: 600; letter-spacing: 0.24em; text-transform: uppercase; color: rgba(255,255,255,0.88);">Desain • Bangun • Renovasi</span>
+        </div>
+        <h1 style="margin: 0; font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 800; font-size: clamp(34px, 7.4vw, 78px); line-height: 1.04; letter-spacing: -0.03em; color: #FFFFFF;">Dari Rencana,<br>Menjadi Nyata</h1>
+        <p style="margin: clamp(18px, 3vw, 26px) 0 0; max-width: 560px; font-size: clamp(15px, 2.1vw, 18px); line-height: 1.68; color: rgba(255,255,255,0.86);">Solusi perencanaan, pembangunan, dan renovasi yang terukur untuk menciptakan ruang berkualitas sesuai kebutuhan dan anggaran Anda.</p>
+        <div style="display: flex; flex-wrap: wrap; gap: 12px; margin-top: clamp(26px, 4vw, 38px);">
+          <a href="{{ waHref }}" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 48px; padding: 14px 26px; border-radius: 10px; background: #FFFFFF; color: #17385F; font-size: 15px; font-weight: 700; flex: 1 1 210px; box-shadow: 0 18px 40px -24px rgba(0,0,0,0.85); transition: transform 240ms ease, background 240ms ease;" style-hover="transform: translateY(-2px); background: #F5F7FA; color: #17385F;">
+            Konsultasi Sekarang
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"></path><path d="m13 6 6 6-6 6"></path></svg>
+          </a>
+          <a href="#proyek" style="display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 48px; padding: 14px 26px; border-radius: 10px; border: 1px solid rgba(255,255,255,0.55); color: #FFFFFF; font-size: 15px; font-weight: 600; flex: 1 1 180px; transition: background 240ms ease, border-color 240ms ease;" style-hover="background: rgba(255,255,255,0.12); border-color: #FFFFFF; color: #FFFFFF;">Lihat Proyek</a>
+        </div>
+        <p style="margin: clamp(26px, 4vw, 36px) 0 0; font-size: clamp(11px, 1.7vw, 13px); letter-spacing: 0.08em; color: rgba(255,255,255,0.7);">Perencanaan matang • Biaya transparan • Pengerjaan profesional</p>
+      </div>
+    </div>
+  </section>
+
+  <section aria-label="Keunggulan Konstruva" style="background: #F5F7FA; border-bottom: 1px solid rgba(13,39,69,0.06);">
+    <div data-grid="trust" style="max-width: 1320px; margin: 0 auto; padding: clamp(34px, 5vw, 54px) clamp(20px, 4vw, 48px); display: grid; gap: clamp(22px, 3vw, 34px); grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));">
+      <div data-reveal="1" style="display: flex; gap: 16px; align-items: flex-start;">
+        <span style="flex: none; width: 46px; height: 46px; border-radius: 12px; background: #FFFFFF; border: 1px solid rgba(13,39,69,0.08); display: inline-flex; align-items: center; justify-content: center; color: #087EA4;">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"></rect><path d="M3 9h18"></path><path d="M9 21V9"></path></svg>
+        </span>
+        <div>
+          <h3 style="margin: 2px 0 6px; font-family: 'Plus Jakarta Sans', sans-serif; font-size: clamp(15px, 2vw, 17px); font-weight: 700; color: #0D2745;">Perencanaan Terukur</h3>
+          <p style="margin: 0; font-size: clamp(13px, 1.8vw, 14.5px); color: #56677B; line-height: 1.6;">Setiap proyek dimulai dengan analisis dan perencanaan yang matang.</p>
+        </div>
+      </div>
+      <div data-reveal="1" style="display: flex; gap: 16px; align-items: flex-start;">
+        <span style="flex: none; width: 46px; height: 46px; border-radius: 12px; background: #FFFFFF; border: 1px solid rgba(13,39,69,0.08); display: inline-flex; align-items: center; justify-content: center; color: #087EA4;">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.6 12 3.5l9 7.1"></path><path d="M5.2 9.4V20.5h13.6V9.4"></path><path d="M9.6 20.5v-6.2h4.8v6.2"></path></svg>
+        </span>
+        <div>
+          <h3 style="margin: 2px 0 6px; font-family: 'Plus Jakarta Sans', sans-serif; font-size: clamp(15px, 2vw, 17px); font-weight: 700; color: #0D2745;">Desain Fungsional</h3>
+          <p style="margin: 0; font-size: clamp(13px, 1.8vw, 14.5px); color: #56677B; line-height: 1.6;">Desain estetis, nyaman, dan disesuaikan dengan kebutuhan pengguna.</p>
+        </div>
+      </div>
+      <div data-reveal="1" style="display: flex; gap: 16px; align-items: flex-start;">
+        <span style="flex: none; width: 46px; height: 46px; border-radius: 12px; background: #FFFFFF; border: 1px solid rgba(13,39,69,0.08); display: inline-flex; align-items: center; justify-content: center; color: #087EA4;">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.2l7.6 2.8v6c0 4.7-3.3 7.6-7.6 8.8-4.3-1.2-7.6-4.1-7.6-8.8V6z"></path><path d="m9.1 12.1 2 2 3.8-3.9"></path></svg>
+        </span>
+        <div>
+          <h3 style="margin: 2px 0 6px; font-family: 'Plus Jakarta Sans', sans-serif; font-size: clamp(15px, 2vw, 17px); font-weight: 700; color: #0D2745;">Pengerjaan Profesional</h3>
+          <p style="margin: 0; font-size: clamp(13px, 1.8vw, 14.5px); color: #56677B; line-height: 1.6;">Mengutamakan kualitas, ketepatan waktu, dan hasil yang dapat diandalkan.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="tentang" style="background: #FFFFFF;">
+    <div style="max-width: 1320px; margin: 0 auto; padding: clamp(64px, 9vw, 130px) clamp(20px, 4vw, 48px); display: grid; gap: clamp(32px, 5vw, 72px); grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr)); align-items: center;">
+      <div data-reveal="1">
+        <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 20px;">
+          <span style="width: 40px; height: 1px; background: #087EA4; flex: none;"></span>
+          <span style="font-size: 11px; font-weight: 700; letter-spacing: 0.24em; text-transform: uppercase; color: #087EA4;">Tentang Konstruva</span>
+        </div>
+        <h2 style="margin: 0; font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 800; font-size: clamp(26px, 4.4vw, 46px); line-height: 1.14; letter-spacing: -0.025em; color: #0D2745;">Membangun dengan Perencanaan dan Ketelitian</h2>
+        <p style="margin: clamp(18px, 3vw, 26px) 0 0; font-size: clamp(14.5px, 2vw, 17px); line-height: 1.75; color: #4A5A6E; max-width: 560px;">Konstruva menyediakan layanan perencanaan, desain, perhitungan biaya, pembangunan, dan renovasi. Setiap proyek dikerjakan melalui proses yang terarah agar desain, kebutuhan, dan anggaran dapat berjalan secara selaras.</p>
+        <div style="margin-top: clamp(26px, 4vw, 36px); display: grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr)); border-top: 1px solid rgba(13,39,69,0.08); padding-top: clamp(22px, 3vw, 28px);">
+          <div>
+            <p style="margin: 0; font-family: 'Plus Jakarta Sans', sans-serif; font-size: 14px; font-weight: 700; color: #17385F;">Desain &amp; Gambar Kerja</p>
+            <p style="margin: 4px 0 0; font-size: 13.5px; color: #56677B;">Denah, facade 3D, dan gambar kerja 2D.</p>
+          </div>
+          <div>
+            <p style="margin: 0; font-family: 'Plus Jakarta Sans', sans-serif; font-size: 14px; font-weight: 700; color: #17385F;">Anggaran Terencana</p>
+            <p style="margin: 4px 0 0; font-size: 13.5px; color: #56677B;">RAB estimasi hingga RAB detail.</p>
+          </div>
+          <div>
+            <p style="margin: 0; font-family: 'Plus Jakarta Sans', sans-serif; font-size: 14px; font-weight: 700; color: #17385F;">Pelaksanaan Terkelola</p>
+            <p style="margin: 4px 0 0; font-size: 13.5px; color: #56677B;">Persiapan sampai penyelesaian proyek.</p>
+          </div>
+        </div>
+      </div>
+      <div data-reveal="1" style="position: relative;">
+        <div style="position: relative; border-radius: 16px; overflow: hidden; box-shadow: 0 40px 80px -50px rgba(13,39,69,0.45);">
+          <img src="assets/tentang.png" alt="Proses perencanaan dan penggambaran denah bangunan oleh tim Konstruva" width="573" height="381" loading="lazy" style="width: 100%; height: clamp(260px, 42vw, 440px); object-fit: cover; object-position: center;">
+        </div>
+        <div style="margin-top: 16px; display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 150px), 1fr));">
+          <div style="border-radius: 14px; overflow: hidden; border: 1px solid rgba(13,39,69,0.07);">
+            <img data-asset="assets/eksterior-1.png" src="assets/eksterior-1.png" alt="Desain eksterior rumah tinggal dua lantai karya Konstruva" width="427" height="320" loading="lazy" style="width: 100%; height: clamp(120px, 18vw, 170px); object-fit: cover;">
+          </div>
+          <div style="border-radius: 14px; overflow: hidden; border: 1px solid rgba(13,39,69,0.07);">
+            <img data-asset="assets/interior-foyer.png" src="assets/interior-foyer.png" alt="Desain interior area pintu masuk hasil perencanaan Konstruva" width="427" height="320" loading="lazy" style="width: 100%; height: clamp(120px, 18vw, 170px); object-fit: cover;">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="layanan" style="background: #F5F7FA; border-top: 1px solid rgba(13,39,69,0.06); border-bottom: 1px solid rgba(13,39,69,0.06);">
+    <div style="max-width: 1320px; margin: 0 auto; padding: clamp(64px, 9vw, 130px) clamp(20px, 4vw, 48px);">
+      <div data-reveal="1" style="max-width: 640px;">
+        <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 18px;">
+          <span style="width: 40px; height: 1px; background: #087EA4; flex: none;"></span>
+          <span style="font-size: 11px; font-weight: 700; letter-spacing: 0.24em; text-transform: uppercase; color: #087EA4;">Layanan</span>
+        </div>
+        <h2 style="margin: 0; font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 800; font-size: clamp(26px, 4.4vw, 46px); line-height: 1.14; letter-spacing: -0.025em; color: #0D2745;">Layanan Kami</h2>
+        <p style="margin: 16px 0 0; font-size: clamp(14.5px, 2vw, 17px); line-height: 1.7; color: #4A5A6E;">Empat lingkup pekerjaan yang dapat dikerjakan secara terpisah maupun terintegrasi, dari perencanaan hingga pembangunan.</p>
+      </div>
+
+      <div data-grid="svc" style="margin-top: clamp(34px, 5vw, 56px); display: grid; gap: clamp(16px, 2vw, 22px); grid-template-columns: repeat(auto-fit, minmax(min(100%, 270px), 1fr));">
+        <article data-reveal="1" onMouseEnter="{{ liftIn }}" onMouseLeave="{{ liftOut }}" style="background: #FFFFFF; border: 1px solid rgba(13,39,69,0.07); border-radius: 16px; padding: clamp(24px, 3vw, 32px); display: flex; flex-direction: column; box-shadow: 0 1px 2px rgba(13,39,69,0.04); transition: transform 280ms ease, box-shadow 280ms ease, border-color 280ms ease;">
+          <span style="width: 48px; height: 48px; border-radius: 13px; background: #EEF4F8; display: inline-flex; align-items: center; justify-content: center; color: #087EA4;">
+            <svg width="23" height="23" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"></rect><path d="M3 9h18"></path><path d="M9 21V9"></path><path d="M15 13h3"></path></svg>
+          </span>
+          <span style="margin-top: 18px; font-size: 11px; font-weight: 700; letter-spacing: 0.2em; color: #56677B;">01</span>
+          <h3 style="margin: 8px 0 10px; font-family: 'Plus Jakarta Sans', sans-serif; font-size: clamp(17px, 2.3vw, 20px); font-weight: 700; color: #0D2745; letter-spacing: -0.01em;">Perencanaan &amp; Desain</h3>
+          <p style="margin: 0 0 18px; font-size: 14px; line-height: 1.65; color: #56677B;">Penyusunan denah dan desain bangunan sebagai dasar pelaksanaan proyek.</p>
+          <ul style="margin: 0 0 22px; padding: 0; list-style: none; display: grid; gap: 9px; border-top: 1px solid rgba(13,39,69,0.07); padding-top: 18px;">
+            <li style="display: flex; gap: 10px; align-items: center; font-size: 13.5px; color: #33465C;"><span style="width: 10px; height: 1px; background: #087EA4; flex: none;"></span>Denah bangunan</li>
+            <li style="display: flex; gap: 10px; align-items: center; font-size: 13.5px; color: #33465C;"><span style="width: 10px; height: 1px; background: #087EA4; flex: none;"></span>3D facade</li>
+            <li style="display: flex; gap: 10px; align-items: center; font-size: 13.5px; color: #33465C;"><span style="width: 10px; height: 1px; background: #087EA4; flex: none;"></span>Gambar kerja 2D</li>
+            <li style="display: flex; gap: 10px; align-items: center; font-size: 13.5px; color: #33465C;"><span style="width: 10px; height: 1px; background: #087EA4; flex: none;"></span>Gambar 3D</li>
+          </ul>
+          <a href="#kontak" onClick="{{ pilihPerencanaan }}" style="margin-top: auto; display: inline-flex; align-items: center; gap: 8px; min-height: 44px; font-size: 13.5px; font-weight: 700; color: #17385F;" style-hover="color: #087EA4; gap: 12px;">
+            Pelajari Layanan
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"></path><path d="m13 6 6 6-6 6"></path></svg>
+          </a>
+        </article>
+
+        <article data-reveal="1" onMouseEnter="{{ liftIn }}" onMouseLeave="{{ liftOut }}" style="background: #FFFFFF; border: 1px solid rgba(13,39,69,0.07); border-radius: 16px; padding: clamp(24px, 3vw, 32px); display: flex; flex-direction: column; box-shadow: 0 1px 2px rgba(13,39,69,0.04); transition: transform 280ms ease, box-shadow 280ms ease, border-color 280ms ease;">
+          <span style="width: 48px; height: 48px; border-radius: 13px; background: #EEF4F8; display: inline-flex; align-items: center; justify-content: center; color: #087EA4;">
+            <svg width="23" height="23" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="2.5" width="16" height="19" rx="2"></rect><path d="M8 6.5h8"></path><path d="M8.5 11h.01"></path><path d="M12 11h.01"></path><path d="M15.5 11h.01"></path><path d="M8.5 15h.01"></path><path d="M12 15h.01"></path><path d="M15.5 14.6v3.4"></path><path d="M8.5 18h4"></path></svg>
+          </span>
+          <span style="margin-top: 18px; font-size: 11px; font-weight: 700; letter-spacing: 0.2em; color: #56677B;">02</span>
+          <h3 style="margin: 8px 0 10px; font-family: 'Plus Jakarta Sans', sans-serif; font-size: clamp(17px, 2.3vw, 20px); font-weight: 700; color: #0D2745; letter-spacing: -0.01em;">Perhitungan Biaya</h3>
+          <p style="margin: 0 0 18px; font-size: 14px; line-height: 1.65; color: #56677B;">Perhitungan kebutuhan biaya agar anggaran proyek lebih mudah dikendalikan.</p>
+          <ul style="margin: 0 0 22px; padding: 0; list-style: none; display: grid; gap: 9px; border-top: 1px solid rgba(13,39,69,0.07); padding-top: 18px;">
+            <li style="display: flex; gap: 10px; align-items: center; font-size: 13.5px; color: #33465C;"><span style="width: 10px; height: 1px; background: #087EA4; flex: none;"></span>RAB estimasi</li>
+            <li style="display: flex; gap: 10px; align-items: center; font-size: 13.5px; color: #33465C;"><span style="width: 10px; height: 1px; background: #087EA4; flex: none;"></span>RAB detail</li>
+            <li style="display: flex; gap: 10px; align-items: flex-start; font-size: 13.5px; color: #33465C;"><span style="width: 10px; height: 1px; background: #087EA4; flex: none; margin-top: 10px;"></span>Perencanaan anggaran yang lebih terukur</li>
+          </ul>
+          <a href="#kontak" onClick="{{ pilihBiaya }}" style="margin-top: auto; display: inline-flex; align-items: center; gap: 8px; min-height: 44px; font-size: 13.5px; font-weight: 700; color: #17385F;" style-hover="color: #087EA4; gap: 12px;">
+            Pelajari Layanan
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"></path><path d="m13 6 6 6-6 6"></path></svg>
+          </a>
+        </article>
+
+        <article data-reveal="1" onMouseEnter="{{ liftIn }}" onMouseLeave="{{ liftOut }}" style="background: #FFFFFF; border: 1px solid rgba(13,39,69,0.07); border-radius: 16px; padding: clamp(24px, 3vw, 32px); display: flex; flex-direction: column; box-shadow: 0 1px 2px rgba(13,39,69,0.04); transition: transform 280ms ease, box-shadow 280ms ease, border-color 280ms ease;">
+          <span style="width: 48px; height: 48px; border-radius: 13px; background: #EEF4F8; display: inline-flex; align-items: center; justify-content: center; color: #087EA4;">
+            <svg width="23" height="23" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3.2"></circle><path d="M12 2.6v3"></path><path d="M12 18.4v3"></path><path d="M2.6 12h3"></path><path d="M18.4 12h3"></path><path d="m5.4 5.4 2.1 2.1"></path><path d="m16.5 16.5 2.1 2.1"></path><path d="m18.6 5.4-2.1 2.1"></path><path d="m7.5 16.5-2.1 2.1"></path></svg>
+          </span>
+          <span style="margin-top: 18px; font-size: 11px; font-weight: 700; letter-spacing: 0.2em; color: #56677B;">03</span>
+          <h3 style="margin: 8px 0 10px; font-family: 'Plus Jakarta Sans', sans-serif; font-size: clamp(17px, 2.3vw, 20px); font-weight: 700; color: #0D2745; letter-spacing: -0.01em;">Design &amp; Build</h3>
+          <p style="margin: 0 0 18px; font-size: 14px; line-height: 1.65; color: #56677B;">Satu alur kerja dari perencanaan desain sampai pelaksanaan pembangunan.</p>
+          <ul style="margin: 0 0 22px; padding: 0; list-style: none; display: grid; gap: 9px; border-top: 1px solid rgba(13,39,69,0.07); padding-top: 18px;">
+            <li style="display: flex; gap: 10px; align-items: flex-start; font-size: 13.5px; color: #33465C;"><span style="width: 10px; height: 1px; background: #087EA4; flex: none; margin-top: 10px;"></span>Perencanaan desain hingga pelaksanaan pembangunan</li>
+            <li style="display: flex; gap: 10px; align-items: center; font-size: 13.5px; color: #33465C;"><span style="width: 10px; height: 1px; background: #087EA4; flex: none;"></span>Pendampingan realisasi proyek</li>
+            <li style="display: flex; gap: 10px; align-items: flex-start; font-size: 13.5px; color: #33465C;"><span style="width: 10px; height: 1px; background: #087EA4; flex: none; margin-top: 10px;"></span>Penyesuaian dengan kebutuhan dan anggaran klien</li>
+          </ul>
+          <a href="#kontak" onClick="{{ pilihDesignBuild }}" style="margin-top: auto; display: inline-flex; align-items: center; gap: 8px; min-height: 44px; font-size: 13.5px; font-weight: 700; color: #17385F;" style-hover="color: #087EA4; gap: 12px;">
+            Pelajari Layanan
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"></path><path d="m13 6 6 6-6 6"></path></svg>
+          </a>
+        </article>
+
+        <article data-reveal="1" onMouseEnter="{{ liftIn }}" onMouseLeave="{{ liftOut }}" style="background: #FFFFFF; border: 1px solid rgba(13,39,69,0.07); border-radius: 16px; padding: clamp(24px, 3vw, 32px); display: flex; flex-direction: column; box-shadow: 0 1px 2px rgba(13,39,69,0.04); transition: transform 280ms ease, box-shadow 280ms ease, border-color 280ms ease;">
+          <span style="width: 48px; height: 48px; border-radius: 13px; background: #EEF4F8; display: inline-flex; align-items: center; justify-content: center; color: #087EA4;">
+            <svg width="23" height="23" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 15a7.5 7.5 0 0 1 15 0"></path><path d="M9.5 14.6V7.4a1 1 0 0 1 1-1h3a1 1 0 0 1 1 1v7.2"></path><rect x="2.5" y="15" width="19" height="3.6" rx="1.2"></rect></svg>
+          </span>
+          <span style="margin-top: 18px; font-size: 11px; font-weight: 700; letter-spacing: 0.2em; color: #56677B;">04</span>
+          <h3 style="margin: 8px 0 10px; font-family: 'Plus Jakarta Sans', sans-serif; font-size: clamp(17px, 2.3vw, 20px); font-weight: 700; color: #0D2745; letter-spacing: -0.01em;">Konstruksi &amp; Pembangunan</h3>
+          <p style="margin: 0 0 18px; font-size: 14px; line-height: 1.65; color: #56677B;">Pelaksanaan pekerjaan di lapangan sesuai desain dan perencanaan yang disepakati.</p>
+          <ul style="margin: 0 0 22px; padding: 0; list-style: none; display: grid; gap: 9px; border-top: 1px solid rgba(13,39,69,0.07); padding-top: 18px;">
+            <li style="display: flex; gap: 10px; align-items: center; font-size: 13.5px; color: #33465C;"><span style="width: 10px; height: 1px; background: #087EA4; flex: none;"></span>Pembangunan rumah dan bangunan</li>
+            <li style="display: flex; gap: 10px; align-items: flex-start; font-size: 13.5px; color: #33465C;"><span style="width: 10px; height: 1px; background: #087EA4; flex: none; margin-top: 10px;"></span>Pelaksanaan konstruksi sesuai desain</li>
+            <li style="display: flex; gap: 10px; align-items: flex-start; font-size: 13.5px; color: #33465C;"><span style="width: 10px; height: 1px; background: #087EA4; flex: none; margin-top: 10px;"></span>Pengelolaan proyek dari persiapan hingga penyelesaian</li>
+          </ul>
+          <a href="#kontak" onClick="{{ pilihKonstruksi }}" style="margin-top: auto; display: inline-flex; align-items: center; gap: 8px; min-height: 44px; font-size: 13.5px; font-weight: 700; color: #17385F;" style-hover="color: #087EA4; gap: 12px;">
+            Pelajari Layanan
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"></path><path d="m13 6 6 6-6 6"></path></svg>
+          </a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="proyek" style="background: #FFFFFF;">
+    <div style="max-width: 1320px; margin: 0 auto; padding: clamp(64px, 9vw, 130px) clamp(20px, 4vw, 48px);">
+      <div data-reveal="1" style="max-width: 660px;">
+        <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 18px;">
+          <span style="width: 40px; height: 1px; background: #087EA4; flex: none;"></span>
+          <span style="font-size: 11px; font-weight: 700; letter-spacing: 0.24em; text-transform: uppercase; color: #087EA4;">Proyek</span>
+        </div>
+        <h2 style="margin: 0; font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 800; font-size: clamp(26px, 4.4vw, 46px); line-height: 1.14; letter-spacing: -0.025em; color: #0D2745;">Proyek Pilihan Konstruva</h2>
+        <p style="margin: 16px 0 0; font-size: clamp(14.5px, 2vw, 17px); line-height: 1.7; color: #4A5A6E;">Beberapa hasil perencanaan, desain, pembangunan, dan renovasi yang telah kami kerjakan.</p>
+      </div>
+
+      <div role="group" aria-label="Filter kategori proyek" style="margin-top: clamp(28px, 4vw, 40px); display: flex; flex-wrap: nowrap; gap: 8px; overflow-x: auto; overscroll-behavior-x: contain; scrollbar-width: none; border-bottom: 1px solid rgba(13,39,69,0.08); padding-bottom: 14px;">
+        <sc-for list="{{ kategori }}" as="k" hint-placeholder-count="7">
+          <button type="button" onClick="{{ k.onClick }}" aria-pressed="{{ k.active }}" style="position: relative; flex: none; white-space: nowrap; min-height: 44px; padding: 11px 16px; border: 1px solid rgba(13,39,69,0.1); border-radius: 999px; background: #FFFFFF; cursor: pointer; font-size: 13px; font-weight: 600; color: #4A5A6E; transition: color 220ms ease, border-color 220ms ease, background 220ms ease;" style-hover="color: #17385F; border-color: rgba(13,39,69,0.28);">
+            <span>{{ k.label }}</span>
+            <sc-if value="{{ k.active }}" hint-placeholder-val="{{ false }}">
+              <span aria-hidden="true" style="position: absolute; inset: -1px; z-index: 1; display: flex; align-items: center; justify-content: center; padding: 0 16px; border-radius: 999px; background: #17385F; color: #FFFFFF; font-weight: 700; white-space: nowrap;">{{ k.label }}</span>
+            </sc-if>
+          </button>
+        </sc-for>
+      </div>
+
+      <div aria-hidden="true" style="display: none;">
+        <img src="assets/desain-facade.png" alt="" data-asset="assets/desain-facade.png">
+        <img src="assets/gambar-denah-1.png" alt="" data-asset="assets/gambar-denah-1.png">
+        <img src="assets/gambar-denah-2.png" alt="" data-asset="assets/gambar-denah-2.png">
+        <img src="assets/gambar-kerja-1.png" alt="" data-asset="assets/gambar-kerja-1.png">
+        <img src="assets/gambar-kerja-2.png" alt="" data-asset="assets/gambar-kerja-2.png">
+        <img src="assets/interior-kamar.png" alt="" data-asset="assets/interior-kamar.png">
+        <img src="assets/interior-dapur.png" alt="" data-asset="assets/interior-dapur.png">
+        <img src="assets/interior-kamar-mandi.png" alt="" data-asset="assets/interior-kamar-mandi.png">
+        <img src="assets/rab-1.png" alt="" data-asset="assets/rab-1.png">
+        <img src="assets/rab-2.png" alt="" data-asset="assets/rab-2.png">
+        <img src="assets/renovasi-1.png" alt="" data-asset="assets/renovasi-1.png">
+        <img src="assets/renovasi-2.png" alt="" data-asset="assets/renovasi-2.png">
+        <img src="assets/renovasi-3.png" alt="" data-asset="assets/renovasi-3.png">
+        <img src="assets/renovasi-4.png" alt="" data-asset="assets/renovasi-4.png">
+        <img src="assets/renovasi-5.png" alt="" data-asset="assets/renovasi-5.png">
+        <img src="assets/renovasi-6.png" alt="" data-asset="assets/renovasi-6.png">
+      </div>
+
+      <div style="margin-top: clamp(20px, 3vw, 28px); display: grid; gap: clamp(14px, 2vw, 20px); grid-template-columns: repeat(auto-fill, minmax(min(100%, 292px), 1fr));">
+        <sc-for list="{{ proyek }}" as="p" hint-placeholder-count="9">
+          <button type="button" onClick="{{ p.onOpen }}" onMouseEnter="{{ zoomIn }}" onMouseLeave="{{ zoomOut }}" onFocus="{{ zoomIn }}" onBlur="{{ zoomOut }}" aria-label="{{ p.aria }}" style="position: relative; display: block; width: 100%; padding: 0; border: 1px solid rgba(13,39,69,0.07); border-radius: 14px; overflow: hidden; background: #F5F7FA; cursor: pointer; text-align: left;">
+            <sc-if value="{{ p.isFoto }}" hint-placeholder-val="{{ true }}">
+              <img src="{{ p.img }}" alt="{{ p.alt }}" loading="lazy" style="width: 100%; height: clamp(210px, 26vw, 260px); object-fit: cover; object-position: center; transition: transform 700ms cubic-bezier(.22,.61,.36,1);">
+            </sc-if>
+            <sc-if value="{{ p.isDokumen }}" hint-placeholder-val="{{ false }}">
+              <img src="{{ p.img }}" alt="{{ p.alt }}" loading="lazy" style="width: 100%; height: clamp(210px, 26vw, 260px); object-fit: contain; object-position: center top; background: #EDF1F5; padding: 14px 14px 46px; transition: transform 700ms cubic-bezier(.22,.61,.36,1);">
+            </sc-if>
+            <span aria-hidden="true" data-overlay="1" style="position: absolute; inset: 0; opacity: 1; background: linear-gradient(180deg, rgba(13,39,69,0) 38%, rgba(13,39,69,0.5) 68%, rgba(13,39,69,0.93) 100%); transition: opacity 380ms ease;"></span>
+            <span data-caption="1" style="position: absolute; left: 0; right: 0; bottom: 0; padding: 16px; display: flex; align-items: flex-end; justify-content: space-between; gap: 12px; transition: transform 380ms ease;">
+              <span style="display: block;">
+                <span style="display: block; font-size: 11px; font-weight: 700; letter-spacing: 0.17em; text-transform: uppercase; color: rgba(255,255,255,0.82);">{{ p.cat }}</span>
+                <span style="display: block; margin-top: 6px; font-family: 'Plus Jakarta Sans', sans-serif; font-size: 15px; font-weight: 700; line-height: 1.35; color: #FFFFFF;">{{ p.title }}</span>
+              </span>
+              <span aria-hidden="true" style="flex: none; width: 34px; height: 34px; border-radius: 50%; background: rgba(255,255,255,0.16); border: 1px solid rgba(255,255,255,0.4); display: inline-flex; align-items: center; justify-content: center; color: #FFFFFF;">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6h9v9"></path><path d="M18 6 7 17"></path></svg>
+              </span>
+            </span>
+          </button>
+        </sc-for>
+      </div>
+      <p style="margin: clamp(22px, 3vw, 30px) 0 0; font-size: 13px; color: #56677B;">Dokumentasi diambil dari portofolio Konstruva. Klik gambar untuk melihat lebih besar.</p>
+    </div>
+  </section>
+
+  <section id="proses" style="background: #F5F7FA; border-top: 1px solid rgba(13,39,69,0.06);">
+    <div style="max-width: 1320px; margin: 0 auto; padding: clamp(64px, 9vw, 130px) clamp(20px, 4vw, 48px);">
+      <div data-reveal="1" style="max-width: 620px;">
+        <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 18px;">
+          <span style="width: 40px; height: 1px; background: #087EA4; flex: none;"></span>
+          <span style="font-size: 11px; font-weight: 700; letter-spacing: 0.24em; text-transform: uppercase; color: #087EA4;">Proses Kerja</span>
+        </div>
+        <h2 style="margin: 0; font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 800; font-size: clamp(26px, 4.4vw, 46px); line-height: 1.14; letter-spacing: -0.025em; color: #0D2745;">Lima Tahap yang Kami Jalani</h2>
+        <p style="margin: 16px 0 0; font-size: clamp(14.5px, 2vw, 17px); line-height: 1.7; color: #4A5A6E;">Alur kerja yang sama kami terapkan pada setiap proyek agar desain, kebutuhan, dan anggaran tetap sejalan.</p>
+      </div>
+      <ol data-reveal="1" style="margin: clamp(34px, 5vw, 56px) 0 0; padding: 0; list-style: none; display: grid; gap: clamp(18px, 2.4vw, 24px); grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr));">
+        <li style="position: relative; padding-top: 26px; border-top: 1px solid rgba(13,39,69,0.14);">
+          <span aria-hidden="true" style="position: absolute; top: -4px; left: 0; width: 7px; height: 7px; border-radius: 50%; background: #087EA4;"></span>
+          <span style="font-family: 'Plus Jakarta Sans', sans-serif; font-size: 12px; font-weight: 700; letter-spacing: 0.16em; color: #56677B;">01</span>
+          <h3 style="margin: 8px 0 8px; font-family: 'Plus Jakarta Sans', sans-serif; font-size: clamp(16px, 2.1vw, 18px); font-weight: 700; color: #0D2745;">Konsultasi Awal</h3>
+          <p style="margin: 0; font-size: 13.8px; line-height: 1.65; color: #56677B;">Membahas kebutuhan, konsep, lokasi, dan anggaran.</p>
+        </li>
+        <li style="position: relative; padding-top: 26px; border-top: 1px solid rgba(13,39,69,0.14);">
+          <span aria-hidden="true" style="position: absolute; top: -4px; left: 0; width: 7px; height: 7px; border-radius: 50%; background: #087EA4;"></span>
+          <span style="font-family: 'Plus Jakarta Sans', sans-serif; font-size: 12px; font-weight: 700; letter-spacing: 0.16em; color: #56677B;">02</span>
+          <h3 style="margin: 8px 0 8px; font-family: 'Plus Jakarta Sans', sans-serif; font-size: clamp(16px, 2.1vw, 18px); font-weight: 700; color: #0D2745;">Survey dan Perencanaan</h3>
+          <p style="margin: 0; font-size: 13.8px; line-height: 1.65; color: #56677B;">Mengumpulkan informasi untuk menyusun rencana proyek.</p>
+        </li>
+        <li style="position: relative; padding-top: 26px; border-top: 1px solid rgba(13,39,69,0.14);">
+          <span aria-hidden="true" style="position: absolute; top: -4px; left: 0; width: 7px; height: 7px; border-radius: 50%; background: #087EA4;"></span>
+          <span style="font-family: 'Plus Jakarta Sans', sans-serif; font-size: 12px; font-weight: 700; letter-spacing: 0.16em; color: #56677B;">03</span>
+          <h3 style="margin: 8px 0 8px; font-family: 'Plus Jakarta Sans', sans-serif; font-size: clamp(16px, 2.1vw, 18px); font-weight: 700; color: #0D2745;">Desain dan Estimasi</h3>
+          <p style="margin: 0; font-size: 13.8px; line-height: 1.65; color: #56677B;">Menyiapkan desain serta perhitungan biaya.</p>
+        </li>
+        <li style="position: relative; padding-top: 26px; border-top: 1px solid rgba(13,39,69,0.14);">
+          <span aria-hidden="true" style="position: absolute; top: -4px; left: 0; width: 7px; height: 7px; border-radius: 50%; background: #087EA4;"></span>
+          <span style="font-family: 'Plus Jakarta Sans', sans-serif; font-size: 12px; font-weight: 700; letter-spacing: 0.16em; color: #56677B;">04</span>
+          <h3 style="margin: 8px 0 8px; font-family: 'Plus Jakarta Sans', sans-serif; font-size: clamp(16px, 2.1vw, 18px); font-weight: 700; color: #0D2745;">Pelaksanaan Proyek</h3>
+          <p style="margin: 0; font-size: 13.8px; line-height: 1.65; color: #56677B;">Pekerjaan dilakukan sesuai perencanaan yang disepakati.</p>
+        </li>
+        <li style="position: relative; padding-top: 26px; border-top: 1px solid rgba(13,39,69,0.14);">
+          <span aria-hidden="true" style="position: absolute; top: -4px; left: 0; width: 7px; height: 7px; border-radius: 50%; background: #087EA4;"></span>
+          <span style="font-family: 'Plus Jakarta Sans', sans-serif; font-size: 12px; font-weight: 700; letter-spacing: 0.16em; color: #56677B;">05</span>
+          <h3 style="margin: 8px 0 8px; font-family: 'Plus Jakarta Sans', sans-serif; font-size: clamp(16px, 2.1vw, 18px); font-weight: 700; color: #0D2745;">Penyelesaian</h3>
+          <p style="margin: 0; font-size: 13.8px; line-height: 1.65; color: #56677B;">Pemeriksaan akhir sebelum hasil diserahkan kepada klien.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section aria-label="Konsultasi Konstruva" style="position: relative; isolation: isolate; overflow: hidden; background: #17385F;">
+    <img data-asset="assets/eksterior-2.png" src="assets/eksterior-2.png" alt="" aria-hidden="true" width="433" height="325" loading="lazy" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 70% 50%; opacity: 0.32; z-index: -2;">
+    <div style="position: absolute; inset: 0; z-index: -1; background: linear-gradient(95deg, #17385F 0%, rgba(23,56,95,0.97) 42%, rgba(23,56,95,0.72) 68%, rgba(23,56,95,0.55) 100%);"></div>
+    <div style="max-width: 1320px; margin: 0 auto; padding: clamp(56px, 8vw, 110px) clamp(20px, 4vw, 48px);">
+      <div data-reveal="1" style="max-width: 640px;">
+        <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 18px;">
+          <span style="width: 40px; height: 1px; background: rgba(255,255,255,0.5); flex: none;"></span>
+          <span style="font-size: 11px; font-weight: 700; letter-spacing: 0.24em; text-transform: uppercase; color: rgba(255,255,255,0.85);">Konsultasi</span>
+        </div>
+        <h2 style="margin: 0; font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 800; font-size: clamp(25px, 4.2vw, 44px); line-height: 1.16; letter-spacing: -0.025em; color: #FFFFFF;">Wujudkan Ruang Impian Anda Bersama Konstruva</h2>
+        <p style="margin: 18px 0 0; font-size: clamp(14.5px, 2vw, 17px); line-height: 1.7; color: rgba(255,255,255,0.86); max-width: 560px;">Konsultasikan kebutuhan desain, pembangunan, atau renovasi Anda. Kami siap membantu dari tahap perencanaan hingga penyelesaian.</p>
+        <div style="display: flex; flex-wrap: wrap; gap: 12px; margin-top: clamp(26px, 4vw, 36px);">
+          <a href="{{ waHref }}" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 48px; padding: 14px 24px; border-radius: 10px; background: #FFFFFF; color: #17385F; font-size: 15px; font-weight: 700; flex: 1 1 250px; transition: transform 240ms ease, background 240ms ease;" style-hover="transform: translateY(-2px); background: #F5F7FA; color: #17385F;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.2a8.8 8.8 0 0 0-7.5 13.4L3.2 20.8l4.4-1.2A8.8 8.8 0 1 0 12 3.2z"></path><path d="M9 8.6c.3 2.9 2.6 5.2 5.5 5.6l1-1.4 2 .9v1.6c-3.6.4-7.9-3.3-8.3-7.1h1.6l.9 2z"></path></svg>
+            Konsultasi via WhatsApp
+          </a>
+          <a href="#proyek" style="display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 48px; padding: 14px 24px; border-radius: 10px; border: 1px solid rgba(255,255,255,0.5); color: #FFFFFF; font-size: 15px; font-weight: 600; flex: 1 1 180px; transition: background 240ms ease, border-color 240ms ease;" style-hover="background: rgba(255,255,255,0.12); border-color: #FFFFFF; color: #FFFFFF;">Lihat Portofolio</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="kontak" style="background: #FFFFFF;">
+    <div style="max-width: 1320px; margin: 0 auto; padding: clamp(64px, 9vw, 130px) clamp(20px, 4vw, 48px); display: grid; gap: clamp(32px, 4.5vw, 64px); grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); align-items: start;">
+      <div data-reveal="1">
+        <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 18px;">
+          <span style="width: 40px; height: 1px; background: #087EA4; flex: none;"></span>
+          <span style="font-size: 11px; font-weight: 700; letter-spacing: 0.24em; text-transform: uppercase; color: #087EA4;">Kontak</span>
+        </div>
+        <h2 style="margin: 0; font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 800; font-size: clamp(26px, 4.4vw, 46px); line-height: 1.14; letter-spacing: -0.025em; color: #0D2745;">Mari Bicarakan Rencana Anda</h2>
+        <p style="margin: 16px 0 0; font-size: clamp(14.5px, 2vw, 17px); line-height: 1.7; color: #4A5A6E; max-width: 480px;">Ceritakan kebutuhan proyek Anda. Kami akan menghubungi Anda melalui WhatsApp untuk membahas langkah berikutnya.</p>
+
+        <div style="margin-top: clamp(28px, 4vw, 38px); display: grid; gap: 4px;">
+          <a href="{{ telHref }}" style="display: flex; align-items: center; gap: 16px; min-height: 44px; padding: 16px 4px; border-bottom: 1px solid rgba(13,39,69,0.08); color: #0D2745;" style-hover="color: #087EA4;">
+            <span style="flex: none; width: 42px; height: 42px; border-radius: 11px; background: #F5F7FA; display: inline-flex; align-items: center; justify-content: center; color: #087EA4;">
+              <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 3.5h3.4l1.7 4.2-2.4 1.6a12.4 12.4 0 0 0 6 6l1.6-2.4 4.2 1.7V18a2.5 2.5 0 0 1-2.5 2.5A15.5 15.5 0 0 1 2.5 6 2.5 2.5 0 0 1 5 3.5z"></path></svg>
+            </span>
+            <span>
+              <span style="display: block; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: #56677B;">Telepon / WhatsApp</span>
+              <span style="display: block; margin-top: 3px; font-family: 'Plus Jakarta Sans', sans-serif; font-size: clamp(15px, 2vw, 17px); font-weight: 700;">0895-3224-22375</span>
+            </span>
+          </a>
+          <a href="mailto:konstruva.id@gmail.com" style="display: flex; align-items: center; gap: 16px; min-height: 44px; padding: 16px 4px; border-bottom: 1px solid rgba(13,39,69,0.08); color: #0D2745;" style-hover="color: #087EA4;">
+            <span style="flex: none; width: 42px; height: 42px; border-radius: 11px; background: #F5F7FA; display: inline-flex; align-items: center; justify-content: center; color: #087EA4;">
+              <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="4.5" width="19" height="15" rx="2"></rect><path d="m2.8 7 9.2 6.4L21.2 7"></path></svg>
+            </span>
+            <span>
+              <span style="display: block; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: #56677B;">Email</span>
+              <span style="display: block; margin-top: 3px; font-family: 'Plus Jakarta Sans', sans-serif; font-size: clamp(14px, 1.9vw, 16px); font-weight: 700; word-break: break-word;">konstruva.id@gmail.com</span>
+            </span>
+          </a>
+          <div style="display: flex; align-items: center; gap: 16px; min-height: 44px; padding: 16px 4px;">
+            <span style="flex: none; width: 42px; height: 42px; border-radius: 11px; background: #F5F7FA; display: inline-flex; align-items: center; justify-content: center; color: #087EA4;">
+              <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M3 12h18"></path><path d="M12 3a15 15 0 0 1 0 18"></path><path d="M12 3a15 15 0 0 0 0 18"></path></svg>
+            </span>
+            <span>
+              <span style="display: block; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: #56677B;">Website</span>
+              <span style="display: block; margin-top: 3px; font-family: 'Plus Jakarta Sans', sans-serif; font-size: clamp(15px, 2vw, 17px); font-weight: 700;">konstruva.id</span>
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <form data-reveal="1" onSubmit="{{ submitForm }}" noValidate="{{ true }}" style="background: #F5F7FA; border: 1px solid rgba(13,39,69,0.07); border-radius: 18px; padding: clamp(22px, 3.4vw, 40px);">
+        <h3 style="margin: 0 0 6px; font-family: 'Plus Jakarta Sans', sans-serif; font-size: clamp(18px, 2.4vw, 22px); font-weight: 700; color: #0D2745;">Formulir Konsultasi</h3>
+        <p style="margin: 0 0 22px; font-size: 13.5px; color: #56677B;">Data yang Anda isi akan diteruskan ke WhatsApp Konstruva.</p>
+
+        <div style="display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr));">
+          <label style="display: block;">
+            <span style="display: block; font-size: 12px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #56677B; margin-bottom: 7px;">Nama *</span>
+            <input type="text" name="nama" value="{{ form.nama }}" onChange="{{ onField }}" placeholder="Nama lengkap" autoComplete="name" aria-invalid="{{ errors.namaFlag }}" style="width: 100%; min-height: 46px; padding: 12px 14px; border: 1px solid rgba(13,39,69,0.14); border-radius: 10px; background: #FFFFFF; font-size: 14.5px;" style-focus="border-color: #087EA4;">
+            <sc-if value="{{ errors.nama }}" hint-placeholder-val="{{ false }}">
+              <span style="display: block; margin-top: 6px; font-size: 12.5px; color: #B23B3B;">{{ errors.nama }}</span>
+            </sc-if>
+          </label>
+          <label style="display: block;">
+            <span style="display: block; font-size: 12px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #56677B; margin-bottom: 7px;">Nomor WhatsApp *</span>
+            <input type="tel" name="wa" value="{{ form.wa }}" onChange="{{ onField }}" placeholder="Contoh: 08123456789" inputMode="tel" autoComplete="tel" aria-invalid="{{ errors.waFlag }}" style="width: 100%; min-height: 46px; padding: 12px 14px; border: 1px solid rgba(13,39,69,0.14); border-radius: 10px; background: #FFFFFF; font-size: 14.5px;" style-focus="border-color: #087EA4;">
+            <sc-if value="{{ errors.wa }}" hint-placeholder-val="{{ false }}">
+              <span style="display: block; margin-top: 6px; font-size: 12.5px; color: #B23B3B;">{{ errors.wa }}</span>
+            </sc-if>
+          </label>
+          <label style="display: block; position: relative;">
+            <span style="display: block; font-size: 12px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #56677B; margin-bottom: 7px;">Jenis Layanan *</span>
+            <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#56677B" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" style="position: absolute; right: 14px; top: 40px; pointer-events: none;"><path d="m6 9.5 6 6 6-6"></path></svg>
+            <select name="layanan" value="{{ form.layanan }}" onChange="{{ onField }}" aria-invalid="{{ errors.layananFlag }}" style="width: 100%; min-height: 46px; padding: 12px 40px 12px 14px; border: 1px solid rgba(13,39,69,0.14); border-radius: 10px; background: #FFFFFF; font-size: 14.5px; appearance: none;" style-focus="border-color: #087EA4;">
+              <option value="">Pilih layanan</option>
+              <option value="Perencanaan &amp; Desain">Perencanaan &amp; Desain</option>
+              <option value="Perhitungan Biaya">Perhitungan Biaya</option>
+              <option value="Design &amp; Build">Design &amp; Build</option>
+              <option value="Konstruksi &amp; Pembangunan">Konstruksi &amp; Pembangunan</option>
+              <option value="Renovasi Rumah Tinggal">Renovasi Rumah Tinggal</option>
+            </select>
+            <sc-if value="{{ errors.layanan }}" hint-placeholder-val="{{ false }}">
+              <span style="display: block; margin-top: 6px; font-size: 12.5px; color: #B23B3B;">{{ errors.layanan }}</span>
+            </sc-if>
+          </label>
+          <label style="display: block;">
+            <span style="display: block; font-size: 12px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #56677B; margin-bottom: 7px;">Lokasi Proyek</span>
+            <input type="text" name="lokasi" value="{{ form.lokasi }}" onChange="{{ onField }}" placeholder="Kota / kecamatan" style="width: 100%; min-height: 46px; padding: 12px 14px; border: 1px solid rgba(13,39,69,0.14); border-radius: 10px; background: #FFFFFF; font-size: 14.5px;" style-focus="border-color: #087EA4;">
+          </label>
+          <label style="display: block;">
+            <span style="display: block; font-size: 12px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #56677B; margin-bottom: 7px;">Perkiraan Anggaran</span>
+            <input type="text" name="anggaran" value="{{ form.anggaran }}" onChange="{{ onField }}" placeholder="Opsional" style="width: 100%; min-height: 46px; padding: 12px 14px; border: 1px solid rgba(13,39,69,0.14); border-radius: 10px; background: #FFFFFF; font-size: 14.5px;" style-focus="border-color: #087EA4;">
+          </label>
+        </div>
+
+        <label style="display: block; margin-top: 16px;">
+          <span style="display: block; font-size: 12px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #56677B; margin-bottom: 7px;">Pesan</span>
+          <textarea name="pesan" value="{{ form.pesan }}" onChange="{{ onField }}" rows="4" placeholder="Ceritakan kebutuhan proyek Anda" style="width: 100%; padding: 12px 14px; border: 1px solid rgba(13,39,69,0.14); border-radius: 10px; background: #FFFFFF; font-size: 14.5px; resize: vertical; min-height: 110px;" style-focus="border-color: #087EA4;"></textarea>
+        </label>
+
+        <button type="submit" style="margin-top: 22px; width: 100%; min-height: 50px; display: inline-flex; align-items: center; justify-content: center; gap: 10px; padding: 14px 22px; border: none; border-radius: 10px; background: #17385F; color: #FFFFFF; font-size: 15px; font-weight: 700; cursor: pointer; transition: background 240ms ease, transform 240ms ease;" style-hover="background: #0D2745; transform: translateY(-1px);">
+          Kirim ke WhatsApp
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"></path><path d="m13 6 6 6-6 6"></path></svg>
+        </button>
+        <p aria-live="polite" style="margin: 14px 0 0; min-height: 20px; font-size: 13px; color: #087EA4;">{{ statusPesan }}</p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer style="background: #0D2745; color: rgba(255,255,255,0.72);">
+  <div style="max-width: 1320px; margin: 0 auto; padding: clamp(48px, 7vw, 86px) clamp(20px, 4vw, 48px) clamp(26px, 3vw, 34px); display: grid; gap: clamp(30px, 4vw, 48px); grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr));">
+    <div style="max-width: 340px;">
+      <img src="assets/logo-mark-white.png" alt="Logo Konstruva" width="149" height="147" loading="lazy" style="width: 42px; height: auto;">
+      <p style="margin: 18px 0 0; font-family: 'Plus Jakarta Sans', sans-serif; font-size: 17px; font-weight: 800; letter-spacing: 0.06em; color: #FFFFFF;">KONSTRUVA</p>
+      <p style="margin: 6px 0 0; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(255,255,255,0.55);">Desain, Bangun &amp; Renovasi</p>
+      <p style="margin: 18px 0 0; font-size: 14px; line-height: 1.7;">Layanan perencanaan, desain, perhitungan biaya, pembangunan, dan renovasi bangunan.</p>
+      <p style="margin: 20px 0 0; font-family: 'Plus Jakarta Sans', sans-serif; font-size: 15px; font-style: italic; color: #FFFFFF;">“Dari Rencana, Menjadi Nyata”</p>
+    </div>
+
+    <nav aria-label="Navigasi footer">
+      <h3 style="margin: 0 0 16px; font-size: 11px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(255,255,255,0.5);">Navigasi</h3>
+      <div style="display: grid; gap: 2px;">
+        <a href="#beranda" style="min-height: 44px; display: flex; align-items: center; font-size: 14px; color: rgba(255,255,255,0.78);" style-hover="color: #FFFFFF;">Beranda</a>
+        <a href="#tentang" style="min-height: 44px; display: flex; align-items: center; font-size: 14px; color: rgba(255,255,255,0.78);" style-hover="color: #FFFFFF;">Tentang Kami</a>
+        <a href="#layanan" style="min-height: 44px; display: flex; align-items: center; font-size: 14px; color: rgba(255,255,255,0.78);" style-hover="color: #FFFFFF;">Layanan</a>
+        <a href="#proyek" style="min-height: 44px; display: flex; align-items: center; font-size: 14px; color: rgba(255,255,255,0.78);" style-hover="color: #FFFFFF;">Proyek</a>
+        <a href="#proses" style="min-height: 44px; display: flex; align-items: center; font-size: 14px; color: rgba(255,255,255,0.78);" style-hover="color: #FFFFFF;">Proses Kerja</a>
+        <a href="#kontak" style="min-height: 44px; display: flex; align-items: center; font-size: 14px; color: rgba(255,255,255,0.78);" style-hover="color: #FFFFFF;">Kontak</a>
+      </div>
+    </nav>
+
+    <div>
+      <h3 style="margin: 0 0 16px; font-size: 11px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(255,255,255,0.5);">Layanan</h3>
+      <ul style="margin: 0; padding: 0; list-style: none; display: grid; gap: 12px;">
+        <li style="font-size: 14px; color: rgba(255,255,255,0.78);">Perencanaan &amp; Desain</li>
+        <li style="font-size: 14px; color: rgba(255,255,255,0.78);">Perhitungan Biaya</li>
+        <li style="font-size: 14px; color: rgba(255,255,255,0.78);">Design &amp; Build</li>
+        <li style="font-size: 14px; color: rgba(255,255,255,0.78);">Konstruksi &amp; Pembangunan</li>
+        <li style="font-size: 14px; color: rgba(255,255,255,0.78);">Renovasi Rumah Tinggal</li>
+      </ul>
+    </div>
+
+    <div>
+      <h3 style="margin: 0 0 16px; font-size: 11px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(255,255,255,0.5);">Kontak</h3>
+      <div style="display: grid; gap: 4px;">
+        <a href="{{ telHref }}" style="min-height: 44px; display: flex; align-items: center; gap: 10px; font-size: 14px; color: rgba(255,255,255,0.82);" style-hover="color: #FFFFFF;">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 3.5h3.4l1.7 4.2-2.4 1.6a12.4 12.4 0 0 0 6 6l1.6-2.4 4.2 1.7V18a2.5 2.5 0 0 1-2.5 2.5A15.5 15.5 0 0 1 2.5 6 2.5 2.5 0 0 1 5 3.5z"></path></svg>
+          0895-3224-22375
+        </a>
+        <a href="mailto:konstruva.id@gmail.com" style="min-height: 44px; display: flex; align-items: center; gap: 10px; font-size: 14px; color: rgba(255,255,255,0.82); word-break: break-word;" style-hover="color: #FFFFFF;">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="4.5" width="19" height="15" rx="2"></rect><path d="m2.8 7 9.2 6.4L21.2 7"></path></svg>
+          konstruva.id@gmail.com
+        </a>
+        <div style="min-height: 44px; display: flex; align-items: center; gap: 10px; font-size: 14px; color: rgba(255,255,255,0.82);">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M3 12h18"></path><path d="M12 3a15 15 0 0 1 0 18"></path><path d="M12 3a15 15 0 0 0 0 18"></path></svg>
+          konstruva.id
+        </div>
+      </div>
+      <div aria-label="Media sosial (segera hadir)" style="margin-top: 18px; display: flex; gap: 10px;">
+        <span title="Instagram — segera hadir" style="width: 44px; height: 44px; border-radius: 50%; border: 1px solid rgba(255,255,255,0.18); display: inline-flex; align-items: center; justify-content: center; color: rgba(255,255,255,0.6);">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="5"></rect><circle cx="12" cy="12" r="3.6"></circle><path d="M17 7h.01"></path></svg>
+        </span>
+        <span title="Facebook — segera hadir" style="width: 44px; height: 44px; border-radius: 50%; border: 1px solid rgba(255,255,255,0.18); display: inline-flex; align-items: center; justify-content: center; color: rgba(255,255,255,0.6);">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.5 8.5h2.2V5.6h-2.4c-2.1 0-3.6 1.4-3.6 3.6v1.6H8.5v2.9h2.2v6.7h3v-6.7h2.3l.4-2.9h-2.7V9.4c0-.5.3-.9.8-.9z"></path></svg>
+        </span>
+        <span title="TikTok — segera hadir" style="width: 44px; height: 44px; border-radius: 50%; border: 1px solid rgba(255,255,255,0.18); display: inline-flex; align-items: center; justify-content: center; color: rgba(255,255,255,0.6);">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4.5c.4 2.1 1.9 3.5 4 3.7v2.6c-1.5 0-2.9-.5-4-1.3v5.2a4.9 4.9 0 1 1-4.9-4.9c.3 0 .6 0 .9.1v2.7a2.2 2.2 0 1 0 1.6 2.1V4.5z"></path></svg>
+        </span>
+      </div>
+    </div>
+  </div>
+  <div style="border-top: 1px solid rgba(255,255,255,0.1);">
+    <div style="max-width: 1320px; margin: 0 auto; padding: 20px clamp(20px, 4vw, 48px); display: flex; flex-wrap: wrap; gap: 10px 20px; align-items: center; justify-content: space-between; font-size: 12.5px; color: rgba(255,255,255,0.55);">
+      <p style="margin: 0;">{{ copyright }}</p>
+      <p style="margin: 0;">Desain, Bangun &amp; Renovasi</p>
+    </div>
+  </div>
+</footer>
+
+<sc-if value="{{ showFab }}" hint-placeholder-val="{{ true }}">
+  <div style="position: fixed; right: clamp(14px, 3vw, 26px); bottom: clamp(14px, 3vw, 26px); z-index: 70; display: flex; align-items: center; gap: 10px;">
+    <sc-if value="{{ isDesktop }}" hint-placeholder-val="{{ true }}">
+      <span style="padding: 9px 14px; border-radius: 8px; background: #0D2745; color: #FFFFFF; font-size: 12.5px; font-weight: 600; white-space: nowrap; box-shadow: 0 10px 30px -18px rgba(0,0,0,0.9);">Konsultasi via WhatsApp</span>
+    </sc-if>
+    <a href="{{ waHref }}" target="_blank" rel="noopener" aria-label="Konsultasi via WhatsApp" title="Konsultasi via WhatsApp" style="position: relative; width: 54px; height: 54px; border-radius: 50%; background: #128C7E; color: #FFFFFF; display: inline-flex; align-items: center; justify-content: center; box-shadow: 0 14px 34px -16px rgba(13,39,69,0.7); transition: transform 240ms ease, background 240ms ease;" style-hover="transform: translateY(-2px) scale(1.04); background: #0F7A6C; color: #FFFFFF;">
+      <span aria-hidden="true" style="position: absolute; inset: 0; border-radius: 50%; border: 2px solid #128C7E; animation: konRing 2.8s ease-out infinite;"></span>
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.2a8.8 8.8 0 0 0-7.5 13.4L3.2 20.8l4.4-1.2A8.8 8.8 0 1 0 12 3.2z"></path><path d="M9 8.6c.3 2.9 2.6 5.2 5.5 5.6l1-1.4 2 .9v1.6c-3.6.4-7.9-3.3-8.3-7.1h1.6l.9 2z"></path></svg>
+    </a>
+  </div>
+</sc-if>
+
+<sc-if value="{{ lightboxOpen }}" hint-placeholder-val="{{ false }}">
+  <div role="dialog" aria-modal="true" aria-label="{{ lightbox.title }}" onClick="{{ closeLightbox }}" style="position: fixed; inset: 0; z-index: 90; background: rgba(13,39,69,0.94); display: flex; align-items: center; justify-content: center; padding: clamp(16px, 4vw, 48px); animation: konFade 220ms ease both;">
+    <div onClick="{{ stop }}" style="max-width: min(1040px, 100%); width: 100%; max-height: 100%; display: flex; flex-direction: column; gap: 16px;">
+      <div style="display: flex; align-items: flex-start; justify-content: space-between; gap: 16px;">
+        <div>
+          <p style="margin: 0; font-size: 11px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(255,255,255,0.72);">{{ lightbox.cat }}</p>
+          <p style="margin: 6px 0 0; font-family: 'Plus Jakarta Sans', sans-serif; font-size: clamp(16px, 2.4vw, 22px); font-weight: 700; color: #FFFFFF;">{{ lightbox.title }}</p>
+        </div>
+        <button type="button" onClick="{{ closeLightbox }}" aria-label="Tutup" style="flex: none; width: 44px; height: 44px; border-radius: 50%; border: 1px solid rgba(255,255,255,0.3); background: transparent; color: #FFFFFF; cursor: pointer; display: inline-flex; align-items: center; justify-content: center;" style-hover="background: rgba(255,255,255,0.14);">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12"></path><path d="M18 6 6 18"></path></svg>
+        </button>
+      </div>
+      <img data-lightbox-img="1" loading="lazy" alt="{{ lightbox.alt }}" style="width: 100%; max-height: 72vh; object-fit: contain; border-radius: 12px; background: #17385F;">
+      <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+        <a href="{{ waHref }}" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 12px 20px; border-radius: 10px; background: #FFFFFF; color: #17385F; font-size: 14px; font-weight: 700;" style-hover="background: #F5F7FA; color: #17385F;">Tanyakan proyek seperti ini</a>
+        <button type="button" onClick="{{ closeLightbox }}" style="min-height: 44px; padding: 12px 20px; border-radius: 10px; border: 1px solid rgba(255,255,255,0.35); background: transparent; color: #FFFFFF; font-size: 14px; font-weight: 600; cursor: pointer;" style-hover="background: rgba(255,255,255,0.12);">Tutup</button>
+      </div>
+    </div>
+  </div>
+</sc-if>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{
+  &quot;waNumber&quot;: { &quot;editor&quot;: &quot;text&quot;, &quot;default&quot;: &quot;62895322422375&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Kontak&quot; },
+  &quot;waMessage&quot;: { &quot;editor&quot;: &quot;text&quot;, &quot;default&quot;: &quot;Halo Konstruva, saya ingin berkonsultasi mengenai layanan desain, pembangunan, atau renovasi.&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Kontak&quot; },
+  &quot;showFloatingWhatsApp&quot;: { &quot;editor&quot;: &quot;boolean&quot;, &quot;default&quot;: true, &quot;tsType&quot;: &quot;boolean&quot;, &quot;section&quot;: &quot;Tampilan&quot; },
+  &quot;tampilkanFotoLapangan&quot;: { &quot;editor&quot;: &quot;boolean&quot;, &quot;default&quot;: true, &quot;tsType&quot;: &quot;boolean&quot;, &quot;section&quot;: &quot;Tampilan&quot; },
+  &quot;filterAwalProyek&quot;: { &quot;editor&quot;: &quot;enum&quot;, &quot;options&quot;: [&quot;Semua&quot;, &quot;Perencanaan dan Desain&quot;, &quot;Gambar Kerja&quot;, &quot;Desain Eksterior&quot;, &quot;Desain Interior&quot;, &quot;Perhitungan Biaya&quot;, &quot;Renovasi Rumah Tinggal&quot;], &quot;default&quot;: &quot;Semua&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Tampilan&quot; }
+}">
+const KATEGORI = ['Semua', 'Perencanaan dan Desain', 'Gambar Kerja', 'Desain Eksterior', 'Desain Interior', 'Perhitungan Biaya', 'Renovasi Rumah Tinggal'];
+
+const PROYEK = [
+  { cat: 'Perencanaan dan Desain', title: 'Desain Facade & Denah Rumah Tinggal', img: 'assets/desain-facade.png', dokumen: true, alt: 'Lembar desain facade dan denah rumah tinggal' },
+  { cat: 'Perencanaan dan Desain', title: 'Denah Bangunan Dua Lantai', img: 'assets/gambar-denah-1.png', dokumen: true, alt: 'Denah bangunan dua lantai hasil perencanaan Konstruva' },
+  { cat: 'Perencanaan dan Desain', title: 'Denah Tata Ruang & Carport', img: 'assets/gambar-denah-2.png', dokumen: true, alt: 'Denah tata ruang beserta area carport' },
+  { cat: 'Gambar Kerja', title: 'Gambar Kerja 2D — Denah Instalasi', img: 'assets/gambar-kerja-1.png', dokumen: true, alt: 'Gambar kerja 2D denah instalasi bangunan' },
+  { cat: 'Gambar Kerja', title: 'Gambar Kerja 2D — Detail Struktur', img: 'assets/gambar-kerja-2.png', dokumen: true, alt: 'Gambar kerja 2D detail struktur bangunan' },
+  { cat: 'Desain Eksterior', title: 'Rumah Tinggal Dua Lantai', img: 'assets/eksterior-1.png', alt: 'Desain eksterior rumah tinggal dua lantai pada waktu sore' },
+  { cat: 'Desain Eksterior', title: 'Facade Rumah Tinggal', img: 'assets/eksterior-2.png', alt: 'Desain facade rumah tinggal dengan aksen kayu vertikal' },
+  { cat: 'Desain Eksterior', title: 'Tampak Depan pada Malam Hari', img: 'assets/hero.png', alt: 'Tampak depan rumah tinggal dengan pencahayaan hangat pada malam hari' },
+  { cat: 'Desain Interior', title: 'Kamar Tidur Utama', img: 'assets/interior-kamar.png', alt: 'Desain interior kamar tidur utama' },
+  { cat: 'Desain Interior', title: 'Dapur & Area Makan', img: 'assets/interior-dapur.png', alt: 'Desain interior dapur dan area makan' },
+  { cat: 'Desain Interior', title: 'Foyer & Pintu Utama', img: 'assets/interior-foyer.png', alt: 'Desain interior foyer dan pintu utama' },
+  { cat: 'Desain Interior', title: 'Kamar Mandi', img: 'assets/interior-kamar-mandi.png', alt: 'Desain interior kamar mandi' },
+  { cat: 'Perhitungan Biaya', title: 'RAB Rumah Tinggal Type 198/115 — Kota Tomohon', img: 'assets/rab-1.png', dokumen: true, alt: 'Rekapitulasi rencana anggaran biaya rumah tinggal type 198/115' },
+  { cat: 'Perhitungan Biaya', title: 'RAB Rumah Tinggal Type 304/135 — DKI Jakarta', img: 'assets/rab-2.png', dokumen: true, alt: 'Rekapitulasi rencana anggaran biaya rumah tinggal type 304/135' },
+  { cat: 'Renovasi Rumah Tinggal', title: 'Renovasi Rumah Tinggal — Pagedangan, Tangerang', img: 'assets/renovasi-1.png', lapangan: true, alt: 'Dokumentasi renovasi rumah tinggal di Pagedangan, Tangerang' },
+  { cat: 'Renovasi Rumah Tinggal', title: 'Pekerjaan Plafon & Kanopi', img: 'assets/renovasi-2.png', lapangan: true, alt: 'Dokumentasi pekerjaan plafon dan kanopi' },
+  { cat: 'Renovasi Rumah Tinggal', title: 'Renovasi Rumah Tinggal Dua Lantai', img: 'assets/renovasi-3.png', lapangan: true, alt: 'Dokumentasi renovasi rumah tinggal dua lantai' },
+  { cat: 'Renovasi Rumah Tinggal', title: 'Pekerjaan Atap & Struktur', img: 'assets/renovasi-4.png', lapangan: true, alt: 'Dokumentasi pekerjaan atap dan struktur bangunan' },
+  { cat: 'Renovasi Rumah Tinggal', title: 'Pekerjaan Finishing Interior', img: 'assets/renovasi-5.png', lapangan: true, alt: 'Dokumentasi pekerjaan finishing interior' },
+  { cat: 'Renovasi Rumah Tinggal', title: 'Pekerjaan Area Carport', img: 'assets/renovasi-6.png', lapangan: true, alt: 'Dokumentasi pekerjaan area carport' }
+];
+
+class Component extends DCLogic {
+  headerRef = React.createRef();
+  state = {
+    isDesktop: typeof window === 'undefined' ? true : window.innerWidth >= 1024,
+    menuOpen: false,
+    filter: null,
+    lightbox: null,
+    form: { nama: '', wa: '', layanan: '', lokasi: '', anggaran: '', pesan: '' },
+    errors: {},
+    status: ''
+  };
+
+  get reduced() {
+    return typeof window !== 'undefined' && window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  }
+
+  componentDidMount() {
+    this.onResize = () => {
+      const isDesktop = window.innerWidth >= 1024;
+      if (isDesktop !== this.state.isDesktop) this.setState({ isDesktop, menuOpen: false });
+      this.syncHero();
+      if (this.onRevealScroll) this.onRevealScroll();
+    };
+    this.onScroll = () => this.applyHeaderTheme();
+    this.onKey = (e) => {
+      if (e.key === 'Escape') this.setState({ lightbox: null, menuOpen: false });
+    };
+    window.addEventListener('resize', this.onResize, { passive: true });
+    window.addEventListener('scroll', this.onScroll, { passive: true });
+    window.addEventListener('keydown', this.onKey);
+    this.onScroll();
+    this.syncHero();
+    this.buildAssetMap();
+    setTimeout(() => this.buildAssetMap(), 600);
+    this.setupReveal();
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.onResize);
+    window.removeEventListener('scroll', this.onScroll);
+    window.removeEventListener('keydown', this.onKey);
+    if (this.onRevealScroll) {
+      window.removeEventListener('scroll', this.onRevealScroll);
+      window.removeEventListener('resize', this.onRevealScroll);
+      document.removeEventListener('visibilitychange', this.onRevealScroll);
+      window.removeEventListener('pageshow', this.onRevealScroll);
+    }
+  }
+
+  syncHeaderFit() {
+    const w = window.innerWidth;
+    const tag = document.querySelector('[data-tagline]');
+    if (tag) tag.style.display = w < 560 ? 'none' : 'block';
+    const cta = document.querySelector('header [data-cta]');
+    if (cta) cta.style.display = w < 345 ? 'none' : 'inline-flex';
+  }
+
+  syncHero() {
+    this.syncHeaderFit();
+    const ov = document.querySelector('[data-hero-overlay]');
+    if (!ov) return;
+    const narrow = window.innerWidth < 760;
+    ov.style.background = narrow
+      ? 'linear-gradient(180deg, rgba(13,39,69,0.62) 0%, rgba(13,39,69,0.42) 34%, rgba(13,39,69,0.82) 72%, rgba(13,39,69,0.96) 100%)'
+      : 'linear-gradient(100deg, rgba(13,39,69,0.95) 0%, rgba(13,39,69,0.88) 28%, rgba(13,39,69,0.62) 58%, rgba(13,39,69,0.28) 100%)';
+    const img = document.querySelector('#beranda img[data-asset]');
+    if (img) img.style.objectPosition = narrow ? '58% 42%' : '62% 50%';
+  }
+
+  resolveAsset(path) {
+    return (this.assetMap && this.assetMap[path]) || path;
+  }
+
+  buildAssetMap() {
+    const map = {};
+    document.querySelectorAll('img[data-asset]').forEach((el) => {
+      const key = el.getAttribute('data-asset');
+      const url = el.currentSrc || el.src;
+      if (key && url) map[key] = url;
+    });
+    if (Object.keys(map).length) { this.assetMap = map; this.forceUpdate(); }
+  }
+
+  applyHeaderTheme() {
+    const el = this.headerRef.current;
+    if (!el) return;
+    const solid = window.scrollY > 24 || this.state.menuOpen;
+    el.style.background = solid ? 'rgba(255,255,255,0.93)' : 'transparent';
+    el.style.backdropFilter = solid ? 'blur(14px)' : 'none';
+    el.style.webkitBackdropFilter = solid ? 'blur(14px)' : 'none';
+    el.style.borderBottomColor = solid ? 'rgba(13,39,69,0.07)' : 'transparent';
+    el.style.boxShadow = solid ? '0 1px 0 rgba(13,39,69,0.05), 0 16px 34px -28px rgba(13,39,69,0.8)' : 'none';
+
+    const lw = el.querySelector('[data-logo="white"]');
+    const ln = el.querySelector('[data-logo="navy"]');
+    if (lw) lw.style.opacity = solid ? '0' : '1';
+    if (ln) ln.style.opacity = solid ? '1' : '0';
+    const brand = el.querySelector('[data-brand]');
+    if (brand) brand.style.color = solid ? '#17385F' : '#FFFFFF';
+    const tag = el.querySelector('[data-tagline]');
+    if (tag) tag.style.color = solid ? '#56677B' : 'rgba(255,255,255,0.82)';
+
+    el.querySelectorAll('[data-navlink]').forEach((a) => {
+      const active = a.getAttribute('data-navlink') === 'active';
+      a.style.color = solid ? (active ? '#17385F' : '#4A5A6E') : (active ? '#FFFFFF' : 'rgba(255,255,255,0.88)');
+    });
+    el.querySelectorAll('[data-cta]').forEach((a) => {
+      a.style.background = solid ? '#17385F' : '#FFFFFF';
+      a.style.color = solid ? '#FFFFFF' : '#17385F';
+      a.style.boxShadow = solid ? '0 10px 24px -16px rgba(13,39,69,0.9)' : '0 10px 24px -16px rgba(0,0,0,0.6)';
+    });
+    const mb = el.querySelector('[data-menubtn]');
+    if (mb) {
+      mb.style.background = solid ? '#FFFFFF' : 'rgba(255,255,255,0.14)';
+      mb.style.color = solid ? '#17385F' : '#FFFFFF';
+      mb.style.borderColor = solid ? 'rgba(13,39,69,0.12)' : 'rgba(255,255,255,0.45)';
+    }
+  }
+
+  componentDidUpdate() {
+    this.applyHeaderTheme();
+    const el = document.querySelector('[data-lightbox-img]');
+    const src = this.state.lightbox && this.state.lightbox.img;
+    if (el && src && el.getAttribute('src') !== src) el.setAttribute('src', src);
+  }
+
+  setupReveal() {
+    if (this.reduced || (typeof document !== 'undefined' && document.hidden)) return;
+    const nodes = Array.prototype.slice.call(document.querySelectorAll('[data-reveal]'));
+    if (!nodes.length) return;
+    nodes.forEach((n) => {
+      n.style.opacity = '0';
+      n.style.transform = 'translateY(18px)';
+      n.style.transition = 'opacity 700ms ease, transform 700ms cubic-bezier(.22,.61,.36,1)';
+    });
+    const show = (n) => { n.style.opacity = '1'; n.style.transform = 'none'; };
+    this.revealPass = () => {
+      const h = window.innerHeight;
+      nodes.forEach((n) => {
+        if (n.style.opacity !== '0') return;
+        const r = n.getBoundingClientRect();
+        if (r.top < h * 0.92 && r.bottom > 0) show(n);
+      });
+    };
+    this.onRevealScroll = () => this.revealPass();
+    window.addEventListener('scroll', this.onRevealScroll, { passive: true });
+    window.addEventListener('resize', this.onRevealScroll, { passive: true });
+    document.addEventListener('visibilitychange', this.onRevealScroll);
+    window.addEventListener('pageshow', this.onRevealScroll);
+    this.revealPass();
+    setTimeout(() => nodes.forEach(show), 3000);
+  }
+
+  waNumber() {
+    return String(this.props.waNumber || '62895322422375').replace(/[^0-9]/g, '');
+  }
+
+  waLink(message) {
+    return 'https://wa.me/' + this.waNumber() + '?text=' + encodeURIComponent(message);
+  }
+
+  setField(name, value) {
+    this.setState((s) => {
+      const errors = Object.assign({}, s.errors);
+      delete errors[name];
+      return { form: Object.assign({}, s.form, { [name]: value }), errors, status: '' };
+    });
+  }
+
+  pilih(layanan) {
+    this.setState((s) => ({ form: Object.assign({}, s.form, { layanan }), errors: {}, status: '' }));
+  }
+
+  renderVals() {
+    const filter = this.state.filter || this.props.filterAwalProyek || 'Semua';
+    const showLapangan = this.props.tampilkanFotoLapangan !== false;
+    const err = this.state.errors;
+
+    const daftar = PROYEK.filter((p) => (showLapangan || !p.lapangan) && (filter === 'Semua' || p.cat === filter));
+
+    return {
+      headerRef: this.headerRef,
+      isDesktop: this.state.isDesktop,
+      isMobile: !this.state.isDesktop,
+      menuOpen: this.state.menuOpen,
+      menuClosed: !this.state.menuOpen,
+      showMobileMenu: !this.state.isDesktop && this.state.menuOpen,
+      showFab: this.props.showFloatingWhatsApp !== false,
+      waHref: this.waLink(this.props.waMessage || 'Halo Konstruva, saya ingin berkonsultasi mengenai layanan desain, pembangunan, atau renovasi.'),
+      telHref: 'tel:+' + this.waNumber(),
+      copyright: '© ' + new Date().getFullYear() + ' Konstruva. Seluruh hak cipta dilindungi.',
+      toggleMenu: () => this.setState((s) => ({ menuOpen: !s.menuOpen })),
+      closeMenu: () => this.setState({ menuOpen: false }),
+
+      kategori: KATEGORI.map((label) => ({
+        label,
+        active: label === filter,
+        onClick: () => this.setState({ filter: label })
+      })),
+
+      proyek: daftar.map((p) => ({
+        img: this.resolveAsset(p.img),
+        alt: p.alt,
+        cat: p.cat,
+        title: p.title,
+        isFoto: !p.dokumen,
+        isDokumen: !!p.dokumen,
+        aria: 'Lihat detail: ' + p.title,
+        onOpen: (e) => {
+          const el = e.currentTarget.querySelector('img');
+          this.setState({ lightbox: Object.assign({}, p, { img: (el && (el.currentSrc || el.src)) || this.resolveAsset(p.img) }) });
+        }
+      })),
+
+      lightboxOpen: !!this.state.lightbox,
+      lightbox: this.state.lightbox || { img: '', alt: '', cat: '', title: '' },
+      closeLightbox: () => this.setState({ lightbox: null }),
+      stop: (e) => e.stopPropagation(),
+
+      zoomIn: (e) => {
+        const img = e.currentTarget.querySelector('img');
+        const ov = e.currentTarget.querySelector('[data-overlay]');
+        if (img && !this.reduced && img.style.objectFit !== 'contain') img.style.transform = 'scale(1.045)';
+        if (ov) ov.style.background = 'linear-gradient(180deg, rgba(13,39,69,0.12) 0%, rgba(13,39,69,0.6) 62%, rgba(13,39,69,0.95) 100%)';
+      },
+      zoomOut: (e) => {
+        const img = e.currentTarget.querySelector('img');
+        const ov = e.currentTarget.querySelector('[data-overlay]');
+        if (img) img.style.transform = 'none';
+        if (ov) ov.style.background = 'linear-gradient(180deg, rgba(13,39,69,0) 38%, rgba(13,39,69,0.5) 68%, rgba(13,39,69,0.93) 100%)';
+      },
+      liftIn: (e) => {
+        if (this.reduced) return;
+        e.currentTarget.style.transform = 'translateY(-4px)';
+        e.currentTarget.style.boxShadow = '0 28px 54px -34px rgba(13,39,69,0.42)';
+        e.currentTarget.style.borderColor = 'rgba(8,126,164,0.35)';
+      },
+      liftOut: (e) => {
+        e.currentTarget.style.transform = 'none';
+        e.currentTarget.style.boxShadow = '0 1px 2px rgba(13,39,69,0.04)';
+        e.currentTarget.style.borderColor = 'rgba(13,39,69,0.07)';
+      },
+
+      pilihPerencanaan: () => this.pilih('Perencanaan & Desain'),
+      pilihBiaya: () => this.pilih('Perhitungan Biaya'),
+      pilihDesignBuild: () => this.pilih('Design & Build'),
+      pilihKonstruksi: () => this.pilih('Konstruksi & Pembangunan'),
+
+      form: this.state.form,
+      errors: {
+        nama: err.nama || '',
+        wa: err.wa || '',
+        layanan: err.layanan || '',
+        namaFlag: err.nama ? 'true' : 'false',
+        waFlag: err.wa ? 'true' : 'false',
+        layananFlag: err.layanan ? 'true' : 'false'
+      },
+      statusPesan: this.state.status,
+      onField: (e) => this.setField(e.target.name, e.target.value),
+      submitForm: (e) => {
+        e.preventDefault();
+        const f = this.state.form;
+        const errors = {};
+        if (f.nama.trim().length < 2) errors.nama = 'Mohon isi nama Anda.';
+        const digits = f.wa.replace(/[^0-9]/g, '');
+        if (digits.length < 9) errors.wa = 'Mohon isi nomor WhatsApp yang valid.';
+        if (!f.layanan) errors.layanan = 'Mohon pilih jenis layanan.';
+        if (Object.keys(errors).length) {
+          this.setState({ errors, status: '' });
+          const first = document.querySelector('[aria-invalid="true"]');
+          if (first) first.focus();
+          return;
+        }
+        const lines = [
+          'Halo Konstruva, saya ingin berkonsultasi.',
+          '',
+          'Nama: ' + f.nama.trim(),
+          'Nomor WhatsApp: ' + f.wa.trim(),
+          'Jenis layanan: ' + f.layanan
+        ];
+        if (f.lokasi.trim()) lines.push('Lokasi proyek: ' + f.lokasi.trim());
+        if (f.anggaran.trim()) lines.push('Perkiraan anggaran: ' + f.anggaran.trim());
+        if (f.pesan.trim()) lines.push('Pesan: ' + f.pesan.trim());
+        this.setState({ errors: {}, status: 'Membuka WhatsApp Konstruva…' });
+        window.open(this.waLink(lines.join('\n')), '_blank', 'noopener');
+      }
+    };
+  }
+}
+
+</script>
+</body>
+</html>
